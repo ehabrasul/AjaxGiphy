@@ -20,13 +20,13 @@ $(document).on("click",".gifImage", toggleGif);
 $("#addGif").on("click", function(event) {
     event.preventDefault();
     // Grab the input from the textbox
-    var cars = $("#gifInput").val().trim();
+    var input  = $("#gifInput").val().trim();
 
     // Add button only if text field is not blank
-    if (theme != "") {
+    if (input !== "") {
 
         // The gif theme from the textbox is then added to gif array
-        cars.push(theme);
+        cars.push(input);
 
         // Calling renderButtons which handles the processing of gif array
         renderButtons();
